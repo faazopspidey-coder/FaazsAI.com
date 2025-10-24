@@ -1,0 +1,116 @@
+<!Doctype>
+<html>
+<head>
+    <title>This is Page 2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Nav</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #ff9900;
+  }
+
+  /* Mobile menu button (hamburger) */
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* Media query for screens smaller than 600px */
+  @media screen and (max-width: 600px) {
+    nav {
+      display: none; /* hide links by default */
+      flex-direction: column;
+      background-color: #1a1a1a;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+
+    nav a {
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    nav.active {
+      display: flex; /* show menu when active */
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Faazs AI tools</h1>
+  <span class="menu-toggle">&#9776;</span> <!-- hamburger icon -->
+  <nav>
+
+ <a href="#home">Home</a>
+
+ <a href="5.project.html">Projects</a>
+
+  <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home">
+  <h2>Home</h2>
+  <p>Welcome to our website!</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p>Check out our latest 3D and AI projects.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Get in touch with us.</p>
+</section>
+
+<script>
+  // Toggle mobile menu
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
+
+</body>
+</html>
